@@ -1,10 +1,10 @@
 {
-  "name": "autocomplete-ruby-solargraph",
+  "name": "pulsar-ide-ruby-solargraph",
   "main": "./lib/main",
   "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [],
-  "repository": "https://github.com/savetheclocktower/autocomplete-ruby-solargraph",
+  "repository": "https://github.com/savetheclocktower/pulsar-ide-ruby-solargraph",
   "license": "MIT",
   "activationHooks": [
     "source.ruby:root-scope-used"
