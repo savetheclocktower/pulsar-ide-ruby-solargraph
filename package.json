@@ -13,7 +13,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "atom-languageclient": "github:savetheclocktower/atom-languageclient#4c79701c2e43ad18612116f6bce4b59d03fc631c",
+    "atom-languageclient": "^1.16.1",
     "solargraph-utils": "^1.2.0"
   },
   "providedServices": {
