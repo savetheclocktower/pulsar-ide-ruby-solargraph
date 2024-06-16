@@ -2,7 +2,7 @@
   "name": "pulsar-ide-ruby-solargraph",
   "main": "./lib/main",
   "version": "0.0.3",
-  "description": "A short description of your package",
+  "description": "Ruby language support for Pulsar via solargraph",
   "keywords": [],
   "repository": "https://github.com/savetheclocktower/pulsar-ide-ruby-solargraph",
   "license": "MIT",
@@ -13,13 +13,44 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "atom-languageclient": "^1.16.1",
+    "@savetheclocktower/atom-languageclient": "^1.17.9",
     "solargraph-utils": "^1.2.0"
   },
   "providedServices": {
+    "intentions:list": {
+      "versions": {
+        "1.0.0": "provideIntentionsList"
+      }
+    },
+    "symbol.provider": {
+      "description": "Allows external sources to suggest symbols for a given file or project.",
+      "versions": {
+        "1.0.0": "provideSymbols"
+      }
+    },
     "autocomplete.provider": {
       "versions": {
         "4.0.0": "provideAutocomplete"
+      }
+    },
+    "code-actions": {
+      "versions": {
+        "0.1.0": "provideCodeActions"
+      }
+    },
+    "code-format.range": {
+      "versions": {
+        "0.1.0": "provideCodeFormat"
+      }
+    },
+    "call-hierarchy": {
+      "versions": {
+        "0.1.0": "provideCallHierarchy"
+      }
+    },
+    "code-highlight": {
+      "versions": {
+        "0.1.0": "provideCodeHighlight"
       }
     },
     "definitions": {
@@ -38,11 +69,33 @@
       }
     }
   },
+  "consumedServices": {
+    "linter-indie": {
+      "versions": {
+        "2.0.0": "consumeLinterV2"
+      }
+    },
+    "datatip": {
+      "versions": {
+        "0.1.0": "consumeDatatip"
+      }
+    },
+    "signature-help": {
+      "versions": {
+        "0.1.0": "consumeSignatureHelp"
+      }
+    }
+  },
   "configSchema": {
     "commandPath": {
       "type": "string",
       "default": "solargraph",
       "description": "Path to the solargraph command."
+    },
+    "enableDiagnostics": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether Solargraph annotates your code with suggestions. Check the README to learn how to customize the reporters."
     }
   }
 }
