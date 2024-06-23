@@ -1,7 +1,7 @@
 {
   "name": "pulsar-ide-ruby-solargraph",
   "main": "./lib/main",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Ruby language support for Pulsar via solargraph",
   "keywords": [],
   "repository": "https://github.com/savetheclocktower/pulsar-ide-ruby-solargraph",
