@@ -8,6 +8,7 @@ A fork of [ruby-solargraph](https://web.pulsar-edit.dev/packages/ruby-solargraph
 * Outline view (hierarchical symbols)
 * Reference highlighting (view other usages of the symbol under the cursor)
 * Datatips and signature help (contextual pop-up documentation)
+* Project-wide renaming of symbols
 
 ## Requirements
 
@@ -39,6 +40,10 @@ Start with these packages; they’re all builtin, actively maintained, and/or bu
 * [pulsar-find-references](https://web.pulsar-edit.dev/packages/pulsar-find-references)
   * Place the cursor inside of a token to highlight other usages of that token
   * Place the cursor inside of a token, then view a `find-and-replace`-style “results” panel containing all usages of that token across your project
+* [pulsar-refactor](https://web.pulsar-edit.dev/packages/pulsar-refactor)
+  * Perform project-wide renaming of variables, methods, classes and types
+
+If you install `busy-signal`, this package will use it to report the status of asynchronous tasks.
 
 For other features that don’t have equivalents above, the legacy `atom-ide` packages should also work:
 
