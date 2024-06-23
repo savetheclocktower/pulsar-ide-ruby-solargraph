@@ -65,7 +65,6 @@
     },
     "refactor": {
       "versions": {
-        "0.1.0": "provideRefactor",
         "0.2.0": "provideRefactorWithPrepare"
       }
     },
